@@ -49,3 +49,31 @@
 #
 # results = ['b', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'b', 'b', 'b', 'b', 'b', 'b', 'a', 'a', 'a', 'a', 'a', 'b', 'b', 'b', 'b','b', 'a','a','a','a','a','a','a','a','a','a','a','a','a','a','a']
 # print(game_with_pc(results))
+
+# Example 3
+
+# def game_with_pc(arr):
+#     gamers_score = []
+#     count = 0
+#     for i in range(len(arr)-1):
+#         if arr[i] == 'b':
+#             count += 1
+#             if count == 6:
+#                 gamers_score.append('b')
+#                 count = 0
+#             elif arr[i+1] == 'a':
+#                 count = 0
+#         elif arr[i] == 'a':
+#             count += 1
+#             if count == 6:
+#                 gamers_score.append('a')
+#                 count = 0
+#             elif arr[i+1] == 'b':
+#                 count = 0
+#     print(gamers_score)
+#     if gamers_score.count('b') == gamers_score.count('a'):
+#         return 'Draw'
+#     return 'PC Wins' if gamers_score.count('b') > gamers_score.count('a') else 'I Win'
+# 
+# results = ['b', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'b', 'b', 'b', 'b', 'b', 'b', 'a', 'a', 'a', 'a', 'a', 'b', 'b', 'b', 'b', 'b', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a']
+# print(game_with_pc(results))
