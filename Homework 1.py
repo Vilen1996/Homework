@@ -119,3 +119,37 @@
 #     else:
 #         print("Get ready!")
 #     i += 1
+
+import random
+
+class MagicFight:
+    def __init__(self, magic_words: list):
+        self.magic_words = magic_words
+
+    def check(self) -> str:
+        """It will return the Lord Voldemort’s three random magic words.
+        And if you have 2 and more corresponding words
+        it will say ‘’You win’ otherwise it will say ‘’You lose’.
+        """
+        lst = []
+        voldemort = ['Avada Kedavra', 'Crucio', 'Imperio']
+        for i in range(3):
+            lst.append(voldemort[random.randint(0, 2)])
+        core = 0
+        core_vol = 0
+        for i in range(3):
+            if self.magic_words[i] == lst[i]:
+                core += 1
+                core_vol -= 1
+            else:
+                core -= 1
+                core_vol += 1
+        print(f'Harry Potter: {core}')
+        print(f'Lord Voldemord: {core_vol}')
+        print(lst)
+        print(self.magic_words)
+        return 'You Win' if core >= 1 else 'You Lose'
+
+
+a = MagicFight(list(input('Write your magic ').split(',')))
+print(a.check())
