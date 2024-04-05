@@ -69,20 +69,20 @@ def extra_task(numbers, target):
     if not 2 <= len(numbers) <= 3 * 104:
         raise ValueError('Wrong numbers input')
     i = 0
+
     while i < len(numbers):
-        i += 1
         j = i
         while j < len(numbers):
-                if not -1000 <= numbers[i] <= 1000:
-                    raise ValueError('Wrong numbers input')
-                elif not -1000 <= target <= 1000:
-                    raise ValueError('Wrong numbers input')
-                elif numbers[i] + numbers[j] == target:
-                    return [i + 1, j + 1]
-                else:
-                    j += 1
+            if not -1000 <= numbers[i] <= 1000:
+                raise ValueError('Wrong numbers input')
+            elif not -1000 <= target <= 1000:
+                raise ValueError('Wrong numbers input')
+            elif numbers[i] + numbers[j] == target:
+                return [i + 1, j + 1]
+            else:
+                j += 1
+        i += 1
 
 
-
-arr_of_nums = [1,2,3,4,5,6,7,8,9]
+arr_of_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 print(extra_task(arr_of_nums, 14))
